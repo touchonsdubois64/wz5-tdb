@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@lichess-org/chessground": "^10.1.1",
+    "chess.js": "^0.10.3"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  },
+  "scripts": {
+    "test": "node --test test/fen.test.mjs test/pgn.test.mjs test/marks.test.mjs test/diagram.test.mjs",
+    "dev": "vite",
+    "build": "vite build"
+  }
+}
