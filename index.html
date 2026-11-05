@@ -12,7 +12,11 @@
 
 <div class="app">
 
-  <h1 class="title">Touchons du Bois<br>La compile</h1>
+  <div class="frame-left" id="frame-left">
+
+  <!-- portrait : un seul titre sur deux lignes ; paysage : « Touchons du bois » au-dessus du cadre de gauche, « La Compile » au-dessus des coups -->
+  <h1 class="title only-pt">Touchons du Bois<br>La compile</h1>
+  <h1 class="title only-ls">Touchons du bois</h1>
 
   <!-- ============ COMMANDES (haut de page) ============ -->
   <section class="controls">
@@ -24,7 +28,11 @@
                 title="Bibliothèque de positions"><img src="./images/library.svg" alt="Bibliothèque de positions"></button>
         <div id="library-menu" class="library-menu" hidden></div>
       </div>
-      <span id="library-title" class="library-title"></span>
+      <div class="library-text">
+        <span id="library-title" class="library-title"></span>
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+        <div id="pgn-message" class="message" role="status" aria-live="polite"></div>
+      </div>
     </div>
 
     <!-- Pendule (trait), Réglages, choix du camp -->
@@ -53,8 +61,6 @@
 
   </section>
 
-  <div id="message" class="message" role="status" aria-live="polite"></div>
-  <div id="pgn-message" class="message" role="status" aria-live="polite"></div>
   <!-- tampons internes (non affichés) : position et PGN en cours de chargement -->
   <input id="fen" type="hidden">
   <input id="pgn" type="hidden">
@@ -71,6 +77,8 @@
           <div id="marks-layer" class="marks-layer" aria-hidden="true"></div>
           <div class="file-labels"></div>
         </div>
+        <!-- paysage : indicateur du trait à droite de l'échiquier -->
+        <div class="turn-indicators" aria-hidden="true"><span id="turn-disc" class="turn-disc"></span><span id="turn-disc-b" class="turn-disc"></span></div>
       </div>
 
       <div class="navigation">
@@ -114,6 +122,13 @@
     </aside>
 
   </section>
+
+  </div><!-- /frame-left -->
+
+  <!-- cadre de droite (paysage seulement) : titre et liste des coups, rempli par app.js -->
+  <div class="frame-right" id="frame-right">
+    <h2 class="title title-right only-ls">La Compile</h2>
+  </div>
 
 </div>
 
