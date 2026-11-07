@@ -1,4 +1,4 @@
-# Touchons du Bois — La compile
+# Touchons du Bois — L’Intégrale
 
 Version simplifiée de Winning Zone, centrée sur la résolution d'exercices.
 
